@@ -26,7 +26,7 @@ export default function NavBar() {
           <Button color="inherit"> Refer & Earn</Button>
           <Button color="inherit"> Resources</Button>
           <Button color="inherit"> About Us</Button>
-          <Button variant="contained" color="primary">Login</Button>
+          <Button variant="outlined" color="primary">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
