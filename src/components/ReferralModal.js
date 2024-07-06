@@ -20,20 +20,20 @@ const ReferralModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Log the form data to the console
+    
     console.log('Referral Form Data:', form);
     
     try {
-      // Send form data to the backend API
+      
       await axios.post('http://localhost:5000/api/referrals', form);
-      // Set the submission status message
+      
       setSubmissionStatus('Referral submitted successfully!');
     } catch (error) {
       console.error('Error submitting referral:', error);
       setSubmissionStatus('Failed to submit referral.');
     }
    
-    // Reset the form fields
+    
     setForm({
       name: '',
       email: '',
@@ -44,11 +44,11 @@ const ReferralModal = ({ isOpen, onClose }) => {
     setTimeout(() => {
       navigate('/'); 
       onClose(); 
-    }, 1000); // 1-second delay and then it goes back to the refer page
+    }, 1000); 
   };
 
   const handleClose = () => {
-    // Reset the form fields when the modal is closed
+    
     setForm({
       name: '',
       email: '',
